@@ -1,0 +1,19 @@
+{
+  "name": "todolist-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christiancostap/todolist-v1.git"
+  },
+  "author": "Christian Parreiras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christiancostap/todolist-v1/issues"
+  },
+  "homepage": "https://github.com/christiancostap/todolist-v1#readme"
+}
