@@ -1,11 +1,14 @@
+//jshint esversion:6
+
 const express = require("express");
 const bodyParser = require("body-parser");
+const date = require(__dirname + "/date.js");
 
 const app = express();
 
+let today = date.getDate();
 let items = []; 
 let workItems = [];
-
 
 app.set("view engine", "ejs");
 
@@ -13,9 +16,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
-    let options = {weekday: 'long', day: 'numeric', month: 'long'}
-    let today = new Date().toLocaleDateString('pt-BR', options);
-    res.render("list", {listTitle: today, newListItem: items});
+    
+    res.render("list", {
+        listTitle: today, 
+        newListItem: items
+    });
 });
 
 
